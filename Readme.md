@@ -8,10 +8,12 @@ This purpose of this project is for debugging TFLM and understanding it from sou
 
 * Windows 10
     * Makefile with [MinGW](https://sourceforge.net/projects/mingw/)
+    * Qt Creator (QMake)
 
 * Linux(Ubuntu 18.04)
     * Cmake + GNU make
     * Makefile
+    * Qt Creator (QMake)
 
 ## Build instructions
 
@@ -55,4 +57,16 @@ Or to see more build command information
 
 ```bash
 make -j VERBOSE=1
+```
+
+### QT
+
+Simply install QT creator on your system. Check out official document [here](https://doc.qt.io/qt-5/gettingstarted.html).
+
+Or run
+
+```bash
+qmake TFLM.pro
+cd ${DEFAULT_QT_BUILD_DIR}
+make -j
 ```
