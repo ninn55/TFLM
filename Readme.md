@@ -9,6 +9,7 @@ This purpose of this project is for debugging TFLM and understanding it from sou
 * Windows 10
     * Makefile with [MinGW](https://sourceforge.net/projects/mingw/)
     * Qt Creator (QMake)
+    * Visual Studio 16 2019
 
 * Linux(Ubuntu 18.04)
     * Cmake + GNU make
@@ -69,4 +70,16 @@ Or run
 qmake TFLM.pro
 cd ${DEFAULT_QT_BUILD_DIR}
 make -j
+```
+
+### Visual Studio
+
+On windows system, install visual studio 2019 first. Checkout official documents [here](https://visualstudio.microsoft.com/).
+
+Simply open solution file in `VS2019/TFLM`.
+
+Or, open Visual Studio Developer command prompt run(WIP)
+
+```
+msbuild TFLM.sln
 ```

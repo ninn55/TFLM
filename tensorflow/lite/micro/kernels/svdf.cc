@@ -25,6 +25,10 @@ limitations under the License.
 #include "tensorflow/lite/micro/kernels/activation_utils.h"
 #include "tensorflow/lite/micro/micro_utils.h"
 
+#ifdef _MSC_VER && !__INTEL_COMPILER
+#define __restrict__
+#endif // WIN32
+
 namespace tflite {
 namespace ops {
 namespace micro {

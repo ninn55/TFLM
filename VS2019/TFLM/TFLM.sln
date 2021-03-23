@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TFLM", "TFLM.vcxproj", "{A0EA3500-52A5-41C8-975D-801D65E00D52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Debug|x64.ActiveCfg = Debug|x64
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Debug|x64.Build.0 = Debug|x64
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Debug|x86.ActiveCfg = Debug|Win32
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Debug|x86.Build.0 = Debug|Win32
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Release|x64.ActiveCfg = Release|x64
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Release|x64.Build.0 = Release|x64
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Release|x86.ActiveCfg = Release|Win32
+		{A0EA3500-52A5-41C8-975D-801D65E00D52}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81033060-1ECD-412C-B7BE-D0CE1F87AF72}
+	EndGlobalSection
+EndGlobal
