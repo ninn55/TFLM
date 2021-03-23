@@ -1,13 +1,20 @@
 # Tensorflow Lite Micro
 
-Generated from Tensorflow v2.3.1
+[![Status](https://storage.googleapis.com/tensorflow-kokoro-build-badges/tflite-micro.svg)](https://storage.googleapis.com/tensorflow-kokoro-build-badges/tflite-micro.html)
 
-This purpose of this project is for debugging TFLM and understanding it from source code. 
+**Generated from Tensorflow v2.3.1**
+
+A complete overview of Tensorflow Lite Micro.
+
+
+Searching through the web, I found there are not that much information about it. So I create this project as a definitive place to go to research Tensorflow Lite Micro. This project is under active development. If you want to contribute please submit pull request or contact me directly at wniu(at)connect(dot)ust(dot)hk.
 
 ## Support Tree
 
+This purpose of this project is for debugging TFLM and understanding it from source code. 
+
 * Windows 10
-    * Makefile with [MinGW](https://sourceforge.net/projects/mingw/)
+    * Makefile with [MinGW](https://sourceforge.net/projects/mingw/) and [git bash](https://git-scm.com/download/win)
     * Qt Creator (QMake)
     * Visual Studio 16 2019
 
@@ -108,3 +115,32 @@ Install visual studio on linux or use Visual Studio Remote on your local machine
 Run build Task to build the project with make. (Default `ctrl+shift+b`)
 
 Run start debugging to well debug. (Default `F5`)
+
+## TODO
+
+- [x] Isolating TFLM source from Tensorflow v2.3.1
+- [x] Makefile
+- [x] Cmake
+- [x] QT
+- [x] Visual Studio
+- [x] Visual Studio Code
+- [ ] WAF
+- [ ] Documentation on directory 
+- [ ] Documentation on TFLM
+- [ ] UML Class diagram for Tensorflow Lite Flatbuffer model
+- [ ] UML Class diagram for Tensorflow Lite Micro
+- [ ] UML Sequence diagram for Tensorflow Lite Micro
+
+## Reference
+
+* TensorFlow Lite Micro: Embedded Machine Learning on TinyML Systems [Arxiv](https://arxiv.org/abs/2010.08678)
+
+* TensorFlow Lite for Microcontrollers official [documents](https://www.tensorflow.org/lite/microcontrollers)
+
+* Tensorflow [Github](https://github.com/tensorflow/tensorflow)
+
+* Tensorflow Lite Micro [Github](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/micro)
+
+## About me
+
+Im ninn55. A grads student from HKUST you can find me [here](https://ninn55.github.io/).
