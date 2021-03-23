@@ -20,6 +20,8 @@ This purpose of this project is for debugging TFLM and understanding it from sou
 
 ### Makefile
 
+Need support for bash. On windows you can try git bash [here](https://git-scm.com/download/win).
+
 Build this project
 
 ```bash
