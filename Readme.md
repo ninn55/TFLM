@@ -15,6 +15,7 @@ This purpose of this project is for debugging TFLM and understanding it from sou
     * Cmake + GNU make
     * Makefile
     * Qt Creator (QMake)
+    * Visual Studio code
 
 ## Build instructions
 
@@ -99,3 +100,11 @@ Or, open Visual Studio Developer command prompt run(WIP)
 ```bash
 msbuild TFLM.sln
 ```
+
+### Visual Studio Code
+
+Install visual studio on linux or use Visual Studio Remote on your local machine.
+
+Run build Task to build the project with make. (Default `ctrl+shift+b`)
+
+Run start debugging to well debug. (Default `F5`)
