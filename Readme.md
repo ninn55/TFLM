@@ -116,6 +116,22 @@ Run build Task to build the project with make. (Default `ctrl+shift+b`)
 
 Run start debugging to well debug. (Default `F5`)
 
+### WAF
+
+[WAF](https://waf.io/) is a "meta build system". WAF requires only python and written entirely in python .
+
+You can install waf by
+
+```bash
+curl -o waf https://waf.io/waf-2.0.20
+chmod +x waf
+```
+
+And build this project with
+```bash
+./waf distclean configure build --target debug -v -j4
+```
+
 ## TODO
 
 - [x] Isolating TFLM source from Tensorflow v2.3.1
@@ -124,7 +140,7 @@ Run start debugging to well debug. (Default `F5`)
 - [x] QT
 - [x] Visual Studio
 - [x] Visual Studio Code
-- [ ] WAF
+- [x] WAF
 - [ ] Documentation on directory 
 - [ ] Documentation on TFLM
 - [ ] UML Class diagram for Tensorflow Lite Flatbuffer model
