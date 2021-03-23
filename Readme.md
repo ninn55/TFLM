@@ -78,8 +78,22 @@ On windows system, install visual studio 2019 first. Checkout official documents
 
 Simply open solution file in `VS2019/TFLM`.
 
+My software version info:
+```
+Microsoft Visual Studio Community 2019
+Version 16.9.2
+VisualStudio.16.Release/16.9.2+31112.23
+Microsoft .NET Framework
+Version 4.8.03752
+
+Installed Version: Community
+
+Visual C++ 2019   00435-60000-00000-AA010
+Microsoft Visual C++ 2019
+```
+
 Or, open Visual Studio Developer command prompt run(WIP)
 
-```
+```bash
 msbuild TFLM.sln
 ```
