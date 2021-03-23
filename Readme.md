@@ -23,6 +23,7 @@ This purpose of this project is for debugging TFLM and understanding it from sou
     * Makefile
     * Qt Creator (QMake)
     * Visual Studio code
+    * WAF
 
 ## Build instructions
 
