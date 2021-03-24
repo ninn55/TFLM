@@ -2,136 +2,45 @@
 
 [![Status](https://storage.googleapis.com/tensorflow-kokoro-build-badges/tflite-micro.svg)](https://storage.googleapis.com/tensorflow-kokoro-build-badges/tflite-micro.html)
 
+EN|[简中](Readme_CN.md)
+
 **Generated from Tensorflow v2.3.1**
 
 A complete overview of Tensorflow Lite Micro.
 
-
 Searching through the web, I found there are not that much information about it. So I create this project as a definitive place to go to research Tensorflow Lite Micro. This project is under active development. If you want to contribute please submit pull request or contact me directly at wniu(at)connect(dot)ust(dot)hk.
 
-## Support Tree
+## Support Matrix
 
-This purpose of this project is for debugging TFLM and understanding it from source code. 
+| OS/Platform |  Makefile | Cmake | Qt | Visual Studio | Visual Studio code | Waf |
+|---|---|---|---|---|---|---|
+|Windows 10| :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |:heavy_check_mark: |:x: |
+|Linux(Ubuntu 18.04)|:heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark:| :x:| :heavy_check_mark:|:heavy_check_mark: |
+|Linux(Centos 7)|:heavy_check_mark: | :heavy_check_mark:| :heavy_check_mark:| :x:| :heavy_check_mark:|:heavy_check_mark: |
 
-* Windows 10
-    * Makefile with [MinGW](https://sourceforge.net/projects/mingw/) and [git bash](https://git-scm.com/download/win)
-    * Qt Creator (QMake)
-    * Visual Studio 16 2019
+Build instruction for supported system can be found [HERE](doc\build.md).
 
-* Linux(Ubuntu 18.04)
-    * Cmake + GNU make
-    * Makefile
-    * Qt Creator (QMake)
-    * Visual Studio code
-    * WAF
+## This Project
 
-## Build instructions
-
-### Makefile
-
-Need support for bash. On windows you can try git bash [here](https://git-scm.com/download/win).
-
-Build this project
-
-```bash
-make
-```
-
-Run this demo
-
-```bash
-./build/hello_world
-```
-
-### Cmake
-
-```bash
-mkdir build && cd build
-```
-Generate Makefile project with:
-
-```bash
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-```
-
-Or
-
-```bash
-cmake -DCMAKE_BUILD_TYPE=Release ..
-```
-Build the project with:
-
-```bash
-make -j
-```
-
-Or to see more build command information
-
-```bash
-make -j VERBOSE=1
-```
-
-### QT
-
-Simply install QT creator on your system. Check out official document [here](https://doc.qt.io/qt-5/gettingstarted.html).
-
-Or run
-
-```bash
-qmake TFLM.pro
-cd ${DEFAULT_QT_BUILD_DIR}
-make -j
-```
-
-### Visual Studio
-
-On windows system, install visual studio 2019 first. Checkout official documents [here](https://visualstudio.microsoft.com/).
-
-Simply open solution file in `VS2019/TFLM`.
-
-My software version info:
-```
-Microsoft Visual Studio Community 2019
-Version 16.9.2
-VisualStudio.16.Release/16.9.2+31112.23
-Microsoft .NET Framework
-Version 4.8.03752
-
-Installed Version: Community
-
-Visual C++ 2019   00435-60000-00000-AA010
-Microsoft Visual C++ 2019
-```
-
-Or, open Visual Studio Developer command prompt run(WIP)
-
-```bash
-msbuild TFLM.sln
-```
-
-### Visual Studio Code
-
-Install visual studio on linux or use Visual Studio Remote on your local machine.
-
-Run build Task to build the project with make. (Default `ctrl+shift+b`)
-
-Run start debugging to well debug. (Default `F5`)
-
-### WAF
-
-[WAF](https://waf.io/) is a "meta build system". WAF requires only python and written entirely in python .
-
-You can install waf by
-
-```bash
-curl -o waf https://waf.io/waf-2.0.20
-chmod +x waf
-```
-
-And build this project with
-```bash
-./waf distclean configure build --target debug -v -j4
-```
+├── .vscode: Visual studio code project files 
+├── doc: Documents
+├── LICENSE: license agreement
+├── Makefile: Make project file
+├── Makefile.plank: yet another Make project file
+├── Readme.md: Main document in English
+├── Readme_zh.md: Main document in Mandarin
+├── tensorflow: Tensorflow lite Micro source code
+│   ├── core: 
+│   └── lite: 
+├── TFLM.pro: 
+├── third_party: 
+│   ├── flatbuffer: flatbuffer header
+│   ├── gemmlowp: gemmlowp header
+│   └── ruy
+├── VS2019: 
+│   └── TFLM: Visual Studio Project files
+├── CMakeLists.txt: Cmake project file
+└── wscript: Waf project file
 
 ## TODO
 
@@ -142,11 +51,18 @@ And build this project with
 - [x] Visual Studio
 - [x] Visual Studio Code
 - [x] WAF
-- [ ] Documentation on directory 
-- [ ] Documentation on TFLM
-- [ ] UML Class diagram for Tensorflow Lite Flatbuffer model
+- [x] Documentation
+- [ ] General Documentation on Tensorflow Lite Micro (WIP)
+- [x] UML Class diagram for Tensorflow Lite Flatbuffer model
 - [ ] UML Class diagram for Tensorflow Lite Micro
 - [ ] UML Sequence diagram for Tensorflow Lite Micro
+- [ ] Provide helper script for file operation only depend on python
+- [ ] Provide pre-trained models and trainning code
+    - [ ] MNIST Classification
+    - [ ] Visual Wake Word
+    - [ ] Cifar-10 Classification with resnet-10
+    - [ ] Anomaly detection with auto-encoder
+    - [ ] Keyword spotting with 
 
 ## Reference
 

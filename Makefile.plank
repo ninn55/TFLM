@@ -1,0 +1,59 @@
+CC = gcc
+CXX = g++
+
+SRC_DIRS = .
+BUILD_DIR = $(SRC_DIRS)/build
+
+CSRCS = $(shell find $(SRC_DIRS) -name *.c)
+
+CXXSRCS = $(shell find $(SRC_DIRS) -name *.cc)
+
+SRCS = $(CSRCS) $(CXXSRCS)
+
+OBJS = $(patsubst %.cc,%.o,$(patsubst %.c,%.o,$(SRCS)))
+
+OBJS := $(addprefix $(BUILD_DIR)/, $(OBJS))
+BOBJS := $(addprefix $(BUILD_DIR)/, $(notdir $(OBJS)))
+
+INC=\
+-I$(SRC_DIRS) \
+-I$(SRC_DIRS)/third_party/gemmlowp \
+-I$(SRC_DIRS)/third_party/flatbuffers/include
+
+CXXFLAGS = $(INC) -O3 -DNDEBUG --std=c++11 -g -DTF_LITE_STATIC_MEMORY
+
+CCFLAGS = $(INC) -O3 -DNDEBUG
+
+LDFLAGS = -lm
+
+TARGET_EXEC = micro_speech
+
+define MACC
+$1:$2
+	$$(CC) $$(CCFLAGS) -c $$< -o $$@
+endef
+
+define MACXX
+$1:$2
+	$$(CXX) $$(CXXFLAGS) -c $$< -o $$@
+endef
+
+.PHONY: 
+	clean
+
+all: $(BUILD_DIR)/$(TARGET_EXEC)
+
+$(BUILD_DIR):
+	mkdir -p $@
+
+# eval info
+$(foreach srcxf, $(CXXSRCS), $(eval $(call MACXX, $(BUILD_DIR)/$(notdir $(patsubst %.cc, %.o, $(srcxf))), $(srcxf))))
+
+# eval info
+$(foreach srcf, $(CSRCS), $(eval $(call MACC, $(BUILD_DIR)/$(notdir $(patsubst %.c, %.o, $(srcf))), $(srcf))))
+
+$(BUILD_DIR)/$(TARGET_EXEC) : $(BUILD_DIR) $(BOBJS) 
+	$(CXX) $(LDFLAGS) $(BOBJS) -o $@
+
+clean:
+	rm -rf $(BUILD_DIR)/*

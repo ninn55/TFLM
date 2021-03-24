@@ -1,6 +1,8 @@
 {
     "files.associations": {
-      "wscript*": "python"
+      "wscript*": "python",
+      "Makefile*": "makefile",
+      "*.mdj": "json"
     }
   }
   
