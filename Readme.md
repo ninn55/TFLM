@@ -22,25 +22,25 @@ Build instruction for supported system can be found [HERE](doc\build.md).
 
 ## This Project
 
-├── .vscode: Visual studio code project files 
-├── doc: Documents
-├── LICENSE: license agreement
-├── Makefile: Make project file
-├── Makefile.plank: yet another Make project file
-├── Readme.md: Main document in English
-├── Readme_zh.md: Main document in Mandarin
-├── tensorflow: Tensorflow lite Micro source code
-│   ├── core: 
-│   └── lite: 
-├── TFLM.pro: 
-├── third_party: 
-│   ├── flatbuffer: flatbuffer header
-│   ├── gemmlowp: gemmlowp header
-│   └── ruy
-├── VS2019: 
-│   └── TFLM: Visual Studio Project files
-├── CMakeLists.txt: Cmake project file
-└── wscript: Waf project file
+* .vscode: Visual studio code project files 
+* doc: Documents
+* LICENSE: license agreement
+* Makefile: Make project file
+* Makefile.plank: yet another Make project file
+* Readme.md: Main document in English
+* Readme_zh.md: Main document in Mandarin
+* tensorflow: Tensorflow lite Micro source code
+    * core
+    * lite
+* TFLM.pro: QT project file
+* third_party: 
+    * flatbuffer: flatbuffer header
+    * gemmlowp: gemmlowp header
+    * ruy
+* VS2019: 
+    * TFLM: Visual Studio Project files
+* CMakeLists.txt: Cmake project file
+* wscript: Waf project file
 
 ## TODO
 
