@@ -58,7 +58,7 @@ Build instruction for supported system can be found [HERE](doc\build.md).
 - [ ] UML Sequence diagram for Tensorflow Lite Micro
 - [ ] Provide helper script for file operation only depend on python
 - [ ] Provide pre-trained models and trainning code
-    - [ ] MNIST Classification
+    - [x] MNIST Classification
     - [ ] Visual Wake Word
     - [ ] Cifar-10 Classification with resnet-10
     - [ ] Anomaly detection with auto-encoder
