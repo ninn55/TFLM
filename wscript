@@ -17,7 +17,7 @@ def build(ctx):
     cxx_files = ctx.path.ant_glob("tensorflow/**/*.cc")
     c_files = ctx.path.ant_glob("tensorflow/**/*.c")
     def_list = ["NDEBUG", \
-                "TF_LITE_STATIC_MEMORY"] # Is this parameter preprocessor definitions?
+                "TF_LITE_STATIC_MEMORY"] # Is this parameter preprocessor definitions? Yes it is!
     inc_list = [top, \
                 top + "/third_party/gemmlowp", \
                 top + "/third_party/flatbuffers/include", \
