@@ -1,4 +1,0 @@
-[submodule "tiny"]
-	path = tiny
-	url = https://github.com/mlcommons/tiny
-	branch = master
