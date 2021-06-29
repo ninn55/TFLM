@@ -52,7 +52,7 @@ Build instruction for supported system can be found [HERE](doc\build.md).
 - [x] Visual Studio Code
 - [x] WAF
 - [x] Documentation
-- [ ] General Documentation on Tensorflow Lite Micro (WIP)
+- [X] General Documentation on Tensorflow Lite Micro (WIP)
 - [x] UML Class diagram for Tensorflow Lite Flatbuffer model
 - [ ] UML Class diagram for Tensorflow Lite Micro
 - [ ] UML Sequence diagram for Tensorflow Lite Micro
